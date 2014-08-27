@@ -13,6 +13,13 @@
   {{ end }}
 </ul>
 
+<hr>
+<form action="/sign" method="POST">
+  <p>Name: <input type="text" name="name"></p>
+  <p>Message: <textarea rows="10" cols="40" name="message"></textarea></p>
+  <p><button>Sign</button></p>
+</form>
+
 {{ end }}
 
 {{ define "title" }} Martin's Guestbook {{ end }}

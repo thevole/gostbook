@@ -47,5 +47,6 @@ func main() {
 		log.Fatal(err)
 	}
 	http.Handle("/entries", &EntriesHandler{})
+	http.HandleFunc("/sign", sign)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
