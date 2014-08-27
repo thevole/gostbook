@@ -5,7 +5,12 @@
 <p>Hello, and welcome to my guestbook, because it's a cool place to be.</p>
 
 <ul class="guests">
-  <li>...</li>
+  {{ range . }}
+  <li>
+  <blockquote>{{ .Message }}</blockquote>
+  <p>- <cite>{{ .Name }}</cite>, <time>{{ .Timestamp }}</time></p>
+  </li>
+  {{ end }}
 </ul>
 
 {{ end }}
